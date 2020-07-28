@@ -1,0 +1,166 @@
+//----------MIXIN--------- (text, button, table, input)
+@mixin container(
+  $margin,
+  $padding,
+  $background,
+  $border: none,
+  $height: auto,
+  $with: auto
+) {
+  height: $height;
+  width: $with;
+  margin: $margin;
+  padding: $padding;
+  border: $border;
+  background: $background;
+  @content;
+}
+
+@mixin text($fontSize, $color, $fontWeight) {
+  font: {
+    size: $fontSize;
+    weight: $fontWeight;
+  }
+  color: $color;
+}
+
+// @mixin text(
+//   $fontSize,
+//   $color,
+//   $margin: 0,
+//   $padding: 0,
+//   $fontWeight: normal,
+//   $lightHeight: normal,
+//   $letterSpacing: normal
+// ) {
+//   font: {
+//     size: $fontSize;
+//     weight: $fontWeight;
+//   }
+//   color: $color;
+//   margin: $margin;
+//   padding: $padding;
+//   line-height: $lightHeight;
+//   letter-spacing: $letterSpacing;
+//   @content;
+// }
+
+@mixin icon($color, $fontSize, $margin: 0, $padding: 0, $border: none) {
+  color: $color;
+  font-size: $fontSize;
+  margin: $margin;
+  padding: $padding;
+  border: $border;
+  @content;
+}
+
+@mixin button(
+  $fontSize,
+  $fontWeight,
+  $color,
+  $backgroundColor,
+  $borderColor,
+  $colorHover,
+  $backgroundColorHover,
+  $borderColorHover,
+  $margin,
+  $padding
+) {
+  color: $color;
+  font: {
+    size: $fontSize;
+    weight: $fontWeight;
+  }
+  margin: $margin;
+  padding: $padding;
+  background-color: $backgroundColor;
+  border: 1px solid $borderColor;
+  &:hover {
+    color: $colorHover;
+    background-color: $backgroundColorHover;
+    border-color: $borderColorHover;
+  }
+}
+
+// %standard-button {
+//   border-width: 1px;
+//   border-style: solid;
+//   border-radius: 0;
+//   padding: spacing(1.2) spacing(1.2);
+//   margin: 0;
+//   line-height: normal;
+// }
+
+// @mixin button($backgroundColor, $borderColor) {
+//   @extend %standard-button;
+//   background-color: $backgroundColor;
+//   border-color: $borderColor;
+//   @content;
+// }
+
+%standard-input {
+  background-color: $lightGrey;
+  border: 1px solid $lightGrey;
+  border-radius: 0;
+  margin: 0;
+  padding: spacing(1.2) spacing(1.2);
+  outline: none;
+}
+
+@mixin input {
+  @extend %standard-input;
+  @content;
+}
+
+@mixin flex(
+  $direction,
+  $justifyContent,
+  $aligntItems,
+  $flexWrap: nowrap,
+  $flexGrow: 0
+) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $aligntItems;
+  flex: {
+    direction: $direction;
+    wrap: $flexWrap;
+    grow: $flexGrow;
+  }
+}
+
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin responsive-for($breakPoint) {
+  @if map-has-key($map: $breakPoints, $key: $breakPoint) {
+    $value: map-get(
+      $map: $breakPoints,
+      $key: $breakPoint,
+    );
+    @media screen and (max-width: $value - 1px) {
+      @content;
+    }
+  } @else {
+    @warn "breakPoint không tồn tại trong breakPoints";
+  }
+}
+
+//------BREAK POINTS--------
+$breakPoints: (
+  "extra-large": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 576px,
+);

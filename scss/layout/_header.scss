@@ -1,0 +1,251 @@
+.mynavbar {
+  border-bottom: solid 1px #dcdacd;
+
+  .navbar-toggler {
+    border-color: transparent;
+  }
+
+  .navbar-brand {
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+    img {
+      width: 110px;
+    }
+  }
+
+  .categories {
+    @include text($subtitle, $textGrey, $fwRegular);
+    margin-right: 30px;
+    align-self: center;
+    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+      color: $textSecondary;
+    }
+  }
+
+  .search {
+    flex-grow: 1;
+    .form-control {
+      @include text($subtitle, $textGrey, $fwRegular);
+      @include input() {
+        flex-grow: 1;
+        transition: none;
+      }
+
+      &:focus {
+        box-shadow: none;
+        border: solid 1px $grey;
+        border-right: solid 1px $lightGrey;
+        background-color: $paper;
+      }
+
+      &:focus + .input-group-prepend {
+        .input-group-text {
+          font-size: $subtitle;
+          background-color: $paper;
+          color: $secondary;
+          border: solid 1px $grey;
+          border-left: none;
+
+          &:hover {
+            background-color: $secondary;
+            color: $textWhite;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .input-group-prepend {
+      .input-group-text {
+        font-size: $subtitle;
+        background-color: $lightGrey;
+        color: $secondary;
+        border: solid 1px $lightGrey;
+        border-left: none;
+
+        &:hover {
+          background-color: $secondary;
+          color: $textWhite;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .navbar-nav {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: spacing(3);
+    .nav-item {
+      .nav-link {
+        padding: spacing(0);
+        @include text($subtitle, $textGrey, $fwRegular);
+        &:hover {
+          color: $textSecondary;
+        }
+      }
+    }
+
+    .nav-item:nth-child(3) {
+      .nav-link {
+        margin-right: spacing(0.5);
+      }
+    }
+  }
+
+  @include responsive-for("extra-large") {
+    .navbar-nav {
+      margin-left: spacing(-1);
+
+      .business,
+      .teach {
+        display: none;
+      }
+
+      .cart {
+        margin-right: spacing(0) !important;
+      }
+    }
+  }
+
+  @include responsive-for("medium") {
+    .categories,
+    .search {
+      display: none;
+    }
+
+    .row {
+      justify-content: center;
+    }
+  }
+}
+// .header {
+//   @include container(0 spacing(2), 0, $paper, $height: 65px);
+//   @include flex(row, space-between, center);
+
+//   &__logo {
+//     @include container(0 spacing(3.5) 0 0, 0, $paper);
+//     img {
+//       width: 110px;
+//     }
+//   }
+
+//   &__categories {
+//     @include container(0 spacing(2.1) 0 0, 0, $paper) {
+//       cursor: pointer;
+//     }
+//     i {
+//       font-size: 14px;
+//       opacity: 0.5;
+//     }
+//     span {
+//       @include text($subtitle, $textGrey, 0, 0, $fwRegular);
+//     }
+//   }
+
+//   &__search {
+//     @include container(0 spacing(2), 0, auto, $paper) {
+//       flex-grow: 1;
+//     }
+
+//     form {
+//       @include flex(row, space-between, center);
+
+//       input {
+//         @include text(
+//           $subtitle,
+//           $textGrey,
+//           0,
+//           spacing(1.2) spacing(1.2),
+//           $fwRegular
+//         );
+//         @include input() {
+//           flex-grow: 1;
+//         }
+//         &:focus {
+//           border-color: $grey;
+//           border-right: none;
+//           background-color: $paper;
+//         }
+
+//         &:focus + button {
+//           border-color: $grey;
+//           border-left: none;
+//           background-color: $paper;
+//         }
+//       }
+
+//       button {
+//         @include button($lightGrey, $lightGrey) {
+//           width: spacing(4.3);
+//           font-size: $subtitle;
+//         }
+
+//         i {
+//           @include icon($secondary, $subtitle) {
+//           }
+//         }
+
+//         &:hover {
+//           background-color: $secondary;
+//           i {
+//             color: $textWhite;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   &__business {
+//     @include container(0 spacing(3.5) 0 0, 0, $paper);
+
+//     a {
+//       @include text($textGrey, $subtitle, 0, 0 spacing(2) 0 0, $fwRegular);
+//       &:hover {
+//         color: $textSecondary;
+//         cursor: pointer;
+//         text-decoration: none;
+//       }
+//     }
+//   }
+
+//   &__teach {
+//     @include container(0 spacing(3.5) 0 0, 0, $paper);
+
+//     a {
+//       @include text($textGrey, $subtitle, 0, 0 spacing(2) 0 0, $fwRegular);
+//       &:hover {
+//         color: $textSecondary;
+//         cursor: pointer;
+//         text-decoration: none;
+//       }
+//     }
+//   }
+
+//   &__login {
+//     button {
+//       @include button($paper, $darkGrey);
+//       @include text($textSecondary, $subtitle, 0px, 0px, $fwBold);
+//     }
+//   }
+
+//   &__signup {
+//     button {
+//       @include button($secondary, $secondary);
+//       @include text($textWhite, $subtitle, 0px, 0px, $fwBold);
+//     }
+//   }
+
+//   @media screen and (max-width: 576px) {
+//     height: 170px;
+//     &__logo {
+//       img {
+//         width: 190px;
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,29 @@
+.login {
+  @include button(
+    $subtitle,
+    $fwBold,
+    $textSecondary,
+    transparent,
+    $blue,
+    $textDarkBlue,
+    transparent,
+    $darkBlue,
+    spacing(0) spacing(0.3),
+    spacing(0.8) spacing(2.2)
+  );
+}
+
+.signup {
+  @include button(
+    $subtitle,
+    $fwBold,
+    $textWhite,
+    $blue,
+    $blue,
+    $textWhite,
+    $darkBlue,
+    $darkBlue,
+    spacing(0) spacing(0.3),
+    spacing(0.8) spacing(2.2)
+  );
+}
