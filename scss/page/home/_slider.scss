@@ -3,5 +3,52 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+  margin: 0 spacing(0.5);
+  height: spacing(40);
+  position: relative;
+
+  &__content {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 45%;
+
+    h1 {
+      @include text($h1, $textWhite, $fwBold);
+    }
+
+    p {
+      @include text($h5, $textWhite, $fwRegular);
+    }
+  }
+
+  @include responsive-for("extra-large") {
+    &__content {
+      h1 {
+        @include text($h3, $textWhite, $fwBold);
+      }
+
+      p {
+        @include text($subtitle2, $textWhite, $fwRegular);
+      }
+    }
+  }
+
+  @include responsive-for("medium") {
+    &__content {
+      h1 {
+        @include text($h4, $textWhite, $fwBold);
+      }
+
+      p {
+        @include text($subtitle1, $textWhite, $fwRegular);
+      }
+    }
+  }
+
+  @include responsive-for("small") {
+    &__content {
+      width: 70%;
+    }
+  }
 }

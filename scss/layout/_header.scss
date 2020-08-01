@@ -15,63 +15,13 @@
   }
 
   .categories {
-    @include text($subtitle, $textGrey, $fwRegular);
-    margin-right: 30px;
+    @include text($subtitle1, $textGrey, $fwRegular);
+    margin-right: spacing(3);
     align-self: center;
     cursor: pointer;
     &:hover {
       cursor: pointer;
       color: $textSecondary;
-    }
-  }
-
-  .search {
-    flex-grow: 1;
-    .form-control {
-      @include text($subtitle, $textGrey, $fwRegular);
-      @include input() {
-        flex-grow: 1;
-        transition: none;
-      }
-
-      &:focus {
-        box-shadow: none;
-        border: solid 1px $grey;
-        border-right: solid 1px $lightGrey;
-        background-color: $paper;
-      }
-
-      &:focus + .input-group-prepend {
-        .input-group-text {
-          font-size: $subtitle;
-          background-color: $paper;
-          color: $secondary;
-          border: solid 1px $grey;
-          border-left: none;
-
-          &:hover {
-            background-color: $secondary;
-            color: $textWhite;
-            cursor: pointer;
-          }
-        }
-      }
-    }
-
-    .input-group-prepend {
-      .input-group-text {
-        font-size: $subtitle;
-        background-color: $lightGrey;
-        color: $secondary;
-        border: solid 1px $lightGrey;
-        border-left: none;
-
-        &:hover {
-          background-color: $secondary;
-          color: $textWhite;
-          cursor: pointer;
-        }
-      }
     }
   }
 
@@ -84,7 +34,7 @@
       .nav-link {
         padding: spacing(0);
         margin: spacing(0) spacing(1);
-        @include text($subtitle, $textGrey, $fwRegular);
+        @include text($subtitle1, $textGrey, $fwRegular);
         &:hover {
           color: $textSecondary;
         }
@@ -122,11 +72,11 @@
 
   @include responsive-for("small") {
     .navbar-brand {
-      margin-right: spacing(2);
+      // margin-right: spacing(2);
       flex-grow: 1;
     }
 
-    .search {
+    .navbar__search {
       flex-grow: 0;
       .form-control {
         display: none;
@@ -138,7 +88,7 @@
           background-color: transparent;
           color: $textDarkGrey;
           border: none;
-          font-size: 14px;
+          font-size: $subtitle2;
 
           &:hover {
             background-color: transparent;
