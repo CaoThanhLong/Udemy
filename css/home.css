@@ -215,4 +215,12 @@ body {
     cursor: pointer;
   }
 }
+
+.slider {
+  background-image: url("../../../img/cover.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
 /*# sourceMappingURL=home.css.map */

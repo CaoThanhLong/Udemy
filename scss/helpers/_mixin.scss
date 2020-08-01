@@ -24,27 +24,6 @@
   color: $color;
 }
 
-// @mixin text(
-//   $fontSize,
-//   $color,
-//   $margin: 0,
-//   $padding: 0,
-//   $fontWeight: normal,
-//   $lightHeight: normal,
-//   $letterSpacing: normal
-// ) {
-//   font: {
-//     size: $fontSize;
-//     weight: $fontWeight;
-//   }
-//   color: $color;
-//   margin: $margin;
-//   padding: $padding;
-//   line-height: $lightHeight;
-//   letter-spacing: $letterSpacing;
-//   @content;
-// }
-
 @mixin icon($color, $fontSize, $margin: 0, $padding: 0, $border: none) {
   color: $color;
   font-size: $fontSize;
@@ -81,22 +60,6 @@
     border-color: $borderColorHover;
   }
 }
-
-// %standard-button {
-//   border-width: 1px;
-//   border-style: solid;
-//   border-radius: 0;
-//   padding: spacing(1.2) spacing(1.2);
-//   margin: 0;
-//   line-height: normal;
-// }
-
-// @mixin button($backgroundColor, $borderColor) {
-//   @extend %standard-button;
-//   background-color: $backgroundColor;
-//   border-color: $borderColor;
-//   @content;
-// }
 
 %standard-input {
   background-color: $lightGrey;
