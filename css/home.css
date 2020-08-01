@@ -1,6 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -55,7 +55,7 @@ body {
 }
 
 .mynavbar {
-  border-bottom: solid 1px #dcdacd;
+  margin: 10px 0px;
 }
 
 .mynavbar .navbar-toggler {
@@ -75,11 +75,11 @@ body {
 .mynavbar .categories {
   font-size: 13px;
   font-weight: 400;
-  color: #505763;
+  color: #73726c;
   margin-right: 30px;
   -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   cursor: pointer;
 }
 
@@ -90,24 +90,24 @@ body {
 
 .mynavbar .search {
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .mynavbar .search .form-control {
   font-size: 13px;
   font-weight: 400;
-  color: #505763;
+  color: #73726c;
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -webkit-transition: none;
   transition: none;
 }
 
 .mynavbar .search .form-control:focus {
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   border: solid 1px #dcdacd;
   border-right: solid 1px #f2f3f5;
   background-color: #ffffff;
@@ -121,11 +121,7 @@ body {
   border-left: none;
 }
 
-.mynavbar
-  .search
-  .form-control:focus
-  + .input-group-prepend
-  .input-group-text:hover {
+.mynavbar .search .form-control:focus + .input-group-prepend .input-group-text:hover {
   background-color: #ec5252;
   color: #ffffff;
   cursor: pointer;
@@ -147,20 +143,21 @@ body {
 
 .mynavbar .navbar-nav {
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  margin-left: 30px;
+  margin-left: 15px;
 }
 
 .mynavbar .navbar-nav .nav-item .nav-link {
   padding: 0px;
+  margin: 0px 10px;
   font-size: 13px;
   font-weight: 400;
-  color: #505763;
+  color: #73726c;
 }
 
 .mynavbar .navbar-nav .nav-item .nav-link:hover {
@@ -168,31 +165,54 @@ body {
 }
 
 .mynavbar .navbar-nav .nav-item:nth-child(3) .nav-link {
-  margin-right: 5px;
+  margin-right: 20px;
 }
 
 @media screen and (max-width: 1200px) {
-  .mynavbar .navbar-nav {
-    margin-left: -10px;
-  }
   .mynavbar .navbar-nav .business,
   .mynavbar .navbar-nav .teach {
     display: none;
-  }
-  .mynavbar .navbar-nav .cart {
-    margin-right: 0px !important;
   }
 }
 
 @media screen and (max-width: 768px) {
   .mynavbar .categories,
-  .mynavbar .search {
+  .mynavbar .login,
+  .mynavbar .signup {
     display: none;
   }
-  .mynavbar .row {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  .mynavbar .mytoggler {
+    display: block;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mynavbar .navbar-brand {
+    margin-right: 20px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .mynavbar .search {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .mynavbar .search .form-control {
+    display: none;
+  }
+  .mynavbar .search .input-group-prepend .input-group-text {
+    display: block;
+    background-color: transparent;
+    color: #505763;
+    border: none;
+    font-size: 14px;
+  }
+  .mynavbar .search .input-group-prepend .input-group-text:hover {
+    background-color: transparent;
+    color: #505763;
+    cursor: pointer;
   }
 }
 /*# sourceMappingURL=home.css.map */

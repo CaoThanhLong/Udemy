@@ -1,5 +1,5 @@
 .mynavbar {
-  border-bottom: solid 1px #dcdacd;
+  margin: spacing(1) spacing(0);
 
   .navbar-toggler {
     border-color: transparent;
@@ -79,10 +79,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-left: spacing(3);
+    margin-left: spacing(1.5);
     .nav-item {
       .nav-link {
         padding: spacing(0);
+        margin: spacing(0) spacing(1);
         @include text($subtitle, $textGrey, $fwRegular);
         &:hover {
           color: $textSecondary;
@@ -92,160 +93,60 @@
 
     .nav-item:nth-child(3) {
       .nav-link {
-        margin-right: spacing(0.5);
+        margin-right: spacing(2);
       }
     }
   }
 
   @include responsive-for("extra-large") {
     .navbar-nav {
-      margin-left: spacing(-1);
-
       .business,
       .teach {
         display: none;
-      }
-
-      .cart {
-        margin-right: spacing(0) !important;
       }
     }
   }
 
   @include responsive-for("medium") {
     .categories,
-    .search {
+    .login,
+    .signup {
       display: none;
     }
 
-    .row {
-      justify-content: center;
+    .mytoggler {
+      display: block;
+      margin-right: spacing(1);
+    }
+  }
+
+  @include responsive-for("small") {
+    .navbar-brand {
+      margin-right: spacing(2);
+      flex-grow: 1;
+    }
+
+    .search {
+      flex-grow: 0;
+      .form-control {
+        display: none;
+      }
+
+      .input-group-prepend {
+        .input-group-text {
+          display: block;
+          background-color: transparent;
+          color: $textDarkGrey;
+          border: none;
+          font-size: 14px;
+
+          &:hover {
+            background-color: transparent;
+            color: $textDarkGrey;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }
-// .header {
-//   @include container(0 spacing(2), 0, $paper, $height: 65px);
-//   @include flex(row, space-between, center);
-
-//   &__logo {
-//     @include container(0 spacing(3.5) 0 0, 0, $paper);
-//     img {
-//       width: 110px;
-//     }
-//   }
-
-//   &__categories {
-//     @include container(0 spacing(2.1) 0 0, 0, $paper) {
-//       cursor: pointer;
-//     }
-//     i {
-//       font-size: 14px;
-//       opacity: 0.5;
-//     }
-//     span {
-//       @include text($subtitle, $textGrey, 0, 0, $fwRegular);
-//     }
-//   }
-
-//   &__search {
-//     @include container(0 spacing(2), 0, auto, $paper) {
-//       flex-grow: 1;
-//     }
-
-//     form {
-//       @include flex(row, space-between, center);
-
-//       input {
-//         @include text(
-//           $subtitle,
-//           $textGrey,
-//           0,
-//           spacing(1.2) spacing(1.2),
-//           $fwRegular
-//         );
-//         @include input() {
-//           flex-grow: 1;
-//         }
-//         &:focus {
-//           border-color: $grey;
-//           border-right: none;
-//           background-color: $paper;
-//         }
-
-//         &:focus + button {
-//           border-color: $grey;
-//           border-left: none;
-//           background-color: $paper;
-//         }
-//       }
-
-//       button {
-//         @include button($lightGrey, $lightGrey) {
-//           width: spacing(4.3);
-//           font-size: $subtitle;
-//         }
-
-//         i {
-//           @include icon($secondary, $subtitle) {
-//           }
-//         }
-
-//         &:hover {
-//           background-color: $secondary;
-//           i {
-//             color: $textWhite;
-//           }
-//         }
-//       }
-//     }
-//   }
-
-//   &__business {
-//     @include container(0 spacing(3.5) 0 0, 0, $paper);
-
-//     a {
-//       @include text($textGrey, $subtitle, 0, 0 spacing(2) 0 0, $fwRegular);
-//       &:hover {
-//         color: $textSecondary;
-//         cursor: pointer;
-//         text-decoration: none;
-//       }
-//     }
-//   }
-
-//   &__teach {
-//     @include container(0 spacing(3.5) 0 0, 0, $paper);
-
-//     a {
-//       @include text($textGrey, $subtitle, 0, 0 spacing(2) 0 0, $fwRegular);
-//       &:hover {
-//         color: $textSecondary;
-//         cursor: pointer;
-//         text-decoration: none;
-//       }
-//     }
-//   }
-
-//   &__login {
-//     button {
-//       @include button($paper, $darkGrey);
-//       @include text($textSecondary, $subtitle, 0px, 0px, $fwBold);
-//     }
-//   }
-
-//   &__signup {
-//     button {
-//       @include button($secondary, $secondary);
-//       @include text($textWhite, $subtitle, 0px, 0px, $fwBold);
-//     }
-//   }
-
-//   @media screen and (max-width: 576px) {
-//     height: 170px;
-//     &__logo {
-//       img {
-//         width: 190px;
-//       }
-//     }
-//   }
-// }
