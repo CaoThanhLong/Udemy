@@ -149,7 +149,7 @@
       $map: $breakPoints,
       $key: $breakPoint,
     );
-    @media screen and (max-width: $value - 1px) {
+    @media screen and (max-width: $value) {
       @content;
     }
   } @else {
