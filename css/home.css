@@ -310,4 +310,10 @@ body {
   font-weight: 400;
   color: #73726c;
 }
+
+@media screen and (max-width: 576px) {
+  .intro {
+    display: none;
+  }
+}
 /*# sourceMappingURL=home.css.map */
