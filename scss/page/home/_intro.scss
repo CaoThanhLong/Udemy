@@ -9,4 +9,8 @@
   p {
     @include text($h6, $textLightGrey, $fwRegular);
   }
+
+  @include responsive-for("small") {
+    display: none;
+  }
 }
