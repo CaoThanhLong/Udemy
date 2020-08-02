@@ -2,7 +2,7 @@
 @mixin container(
   $margin,
   $padding,
-  $background,
+  $background: none,
   $border: none,
   $height: auto,
   $with: auto

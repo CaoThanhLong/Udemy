@@ -284,4 +284,13 @@ body {
   color: #ffffff;
   cursor: pointer;
 }
+
+.mycontainer {
+  height: auto;
+  width: auto;
+  margin: 20px 15px;
+  padding: 0px;
+  border: none;
+  background: none;
+}
 /*# sourceMappingURL=home.css.map */
