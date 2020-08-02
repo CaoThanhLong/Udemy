@@ -1,0 +1,36 @@
+.owl-carousel {
+  .owl-nav {
+    display: block !important;
+  }
+}
+
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 13%;
+  left: -2%;
+  width: 45px;
+  height: 45px;
+  border-radius: 50% !important;
+  background-color: $paper !important;
+  box-shadow: 0 2px 8px 2px rgba(20, 23, 28, 0.1);
+  outline: none !important;
+
+  span {
+    @include text($h1, $textSecondary, $fwRegular);
+    line-height: 0.7;
+  }
+
+  &:hover {
+    span {
+      @include text($h1, $textGrey, $fwRegular);
+      line-height: 0.7;
+    }
+  }
+}
+
+.owl-next {
+  left: unset;
+  top: 13%;
+  right: -2%;
+}
