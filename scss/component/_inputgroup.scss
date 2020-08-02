@@ -1,0 +1,50 @@
+.navbar__search,
+.slider__search {
+  flex-grow: 1;
+  .form-control {
+    @include text($subtitle1, $textGrey, $fwRegular);
+    @include input() {
+      flex-grow: 1;
+      transition: none;
+    }
+    background-clip: unset;
+    &:focus {
+      box-shadow: none;
+      border: solid 1px $grey;
+      border-right: solid 1px $lightGrey;
+      background-color: $paper;
+    }
+
+    &:focus + .input-group-prepend {
+      .input-group-text {
+        font-size: $subtitle1;
+        background-color: $paper;
+        color: $secondary;
+        border: solid 1px $grey;
+        border-left: none;
+
+        &:hover {
+          background-color: $secondary;
+          color: $textWhite;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .input-group-prepend {
+    .input-group-text {
+      font-size: $subtitle1;
+      background-color: $lightGrey;
+      color: $secondary;
+      border: solid 1px $lightGrey;
+      border-left: none;
+
+      &:hover {
+        background-color: $secondary;
+        color: $textWhite;
+        cursor: pointer;
+      }
+    }
+  }
+}
