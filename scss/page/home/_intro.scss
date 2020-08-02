@@ -1,0 +1,12 @@
+.intro {
+  margin-top: 70px;
+
+  h4 {
+    @include text($h4, $textGrey, $fwBold);
+    margin-bottom: spacing(0.8);
+  }
+
+  p {
+    @include text($h6, $textLightGrey, $fwRegular);
+  }
+}
