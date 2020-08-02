@@ -15,8 +15,8 @@ body {
 
 .navbar__search .form-control,
 .slider__search .form-control {
-  background-color: #f2f3f5;
-  border: 1px solid #f2f3f5;
+  background-color: #73726c;
+  border: 1px solid #73726c;
   border-radius: 0;
   margin: 0;
   padding: 12px 12px;
@@ -192,6 +192,62 @@ body {
   }
 }
 
+.intro {
+  margin-top: 70px;
+}
+
+.intro h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3c3b37;
+  margin-bottom: 8px;
+}
+
+.intro p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #73726c;
+}
+
+@media screen and (max-width: 576px) {
+  .intro {
+    display: none;
+  }
+}
+
+.courses .nav .nav-item:hover .nav-link {
+  border: none;
+}
+
+.courses .nav .nav-item .nav-link.active {
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #3c3b37;
+  position: relative;
+}
+
+.courses .nav .nav-item .nav-link.active::after {
+  content: "";
+  background-color: #3c3b37;
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(5%, 0);
+          transform: translate(5%, 0);
+  width: 90%;
+}
+
+.courses .nav .nav-item .nav-link {
+  font-size: 16px;
+  font-weight: 700;
+  color: #73726c;
+  border: none;
+  padding: 15px 12px;
+}
+
 .login {
   color: #0f7c90;
   font-size: 13px;
@@ -248,8 +304,8 @@ body {
 .slider__search .form-control:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: solid 1px #dcdacd;
-  border-right: solid 1px #f2f3f5;
+  border: solid 1px #3c3b37;
+  border-right: solid 1px #73726c;
   background-color: #ffffff;
 }
 
@@ -258,7 +314,7 @@ body {
   font-size: 13px;
   background-color: #ffffff;
   color: #ec5252;
-  border: solid 1px #dcdacd;
+  border: solid 1px #3c3b37;
   border-left: none;
 }
 
@@ -272,9 +328,9 @@ body {
 .navbar__search .input-group-prepend .input-group-text,
 .slider__search .input-group-prepend .input-group-text {
   font-size: 13px;
-  background-color: #f2f3f5;
+  background-color: #73726c;
   color: #ec5252;
-  border: solid 1px #f2f3f5;
+  border: solid 1px #73726c;
   border-left: none;
 }
 
@@ -292,28 +348,5 @@ body {
   padding: 0px;
   border: none;
   background: none;
-}
-
-.intro {
-  margin-top: 70px;
-}
-
-.intro h4 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #3c3b37;
-  margin-bottom: 8px;
-}
-
-.intro p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #73726c;
-}
-
-@media screen and (max-width: 576px) {
-  .intro {
-    display: none;
-  }
 }
 /*# sourceMappingURL=home.css.map */
