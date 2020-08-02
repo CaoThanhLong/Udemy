@@ -175,7 +175,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .slider__content h1 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     color: #ffffff;
   }
@@ -288,9 +288,26 @@ body {
 .mycontainer {
   height: auto;
   width: auto;
-  margin: 20px 15px;
+  margin: 30px 27px;
   padding: 0px;
   border: none;
   background: none;
+}
+
+.intro {
+  margin-top: 70px;
+}
+
+.intro h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3c3b37;
+  margin-bottom: 8px;
+}
+
+.intro p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #73726c;
 }
 /*# sourceMappingURL=home.css.map */
