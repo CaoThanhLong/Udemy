@@ -1,0 +1,9 @@
+.student_view {
+  h4 {
+    @include text($h4, $textGrey, $fwBold);
+    margin-bottom: spacing(1.3);
+  }
+  //   .student_view__content {
+  //     padding: spacing(1) spacing(0.4);
+  //   }
+}
