@@ -34,7 +34,7 @@
   .tab-content {
     .tab-pane.container {
       margin: spacing(0);
-      padding: spacing(2) spacing(0.4);
+      padding: spacing(2) spacing(0.4) spacing(0) spacing(0.4);
       max-width: 100%;
     }
   }
