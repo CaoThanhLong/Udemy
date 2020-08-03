@@ -3,4 +3,10 @@
     @include text($h4, $textGrey, $fwBold);
     margin-bottom: spacing(1.3);
   }
+
+  @include responsive-for("extra-small") {
+    h4 {
+      font-size: $h6;
+    }
+  }
 }

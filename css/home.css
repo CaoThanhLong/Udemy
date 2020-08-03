@@ -273,6 +273,12 @@ body {
   margin-bottom: 13px;
 }
 
+@media screen and (max-width: 420px) {
+  .student_view h4 {
+    font-size: 16px;
+  }
+}
+
 .because_you_search h4 {
   font-size: 24px;
   font-weight: 700;
