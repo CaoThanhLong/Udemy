@@ -1,6 +1,6 @@
 .login {
   @include button(
-    $subtitle1,
+    $subtitle2,
     $fwBold,
     $textSecondary,
     transparent,
@@ -15,7 +15,7 @@
 
 .signup {
   @include button(
-    $subtitle1,
+    $subtitle2,
     $fwBold,
     $textWhite,
     $blue,

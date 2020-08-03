@@ -15,7 +15,7 @@
   }
 
   .categories {
-    @include text($subtitle1, $textGrey, $fwRegular);
+    @include text($subtitle2, $textGrey, $fwRegular);
     margin-right: spacing(3);
     align-self: center;
     cursor: pointer;
@@ -34,7 +34,7 @@
       .nav-link {
         padding: spacing(0);
         margin: spacing(0) spacing(1);
-        @include text($subtitle1, $textGrey, $fwRegular);
+        @include text($subtitle2, $textGrey, $fwRegular);
         &:hover {
           color: $textSecondary;
         }
