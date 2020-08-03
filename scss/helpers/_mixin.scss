@@ -42,6 +42,7 @@
   $colorHover,
   $backgroundColorHover,
   $borderColorHover,
+  $boxshadowFocus,
   $margin,
   $padding
 ) {
@@ -58,6 +59,9 @@
     color: $colorHover;
     background-color: $backgroundColorHover;
     border-color: $borderColorHover;
+  }
+  &:focus {
+    box-shadow: $boxshadowFocus;
   }
 }
 

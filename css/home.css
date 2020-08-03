@@ -301,6 +301,48 @@ body {
   }
 }
 
+.recommendation {
+  background: url(../../../img/purple-intersect.svg) repeat-x #6e1a52;
+  background-size: auto 120%;
+  background-position: 0 -2.4rem;
+  padding: 48px 24px;
+  margin: 40px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.recommendation h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.recommendation p {
+  font-size: 19px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
 .owl-carousel {
   margin: 0px 2px;
 }
@@ -408,6 +450,11 @@ body {
   border-color: #094c59;
 }
 
+.login:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .signup {
   color: #ffffff;
   font-size: 14px;
@@ -422,6 +469,32 @@ body {
   color: #ffffff;
   background-color: #094c59;
   border-color: #094c59;
+}
+
+.signup:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.get-started {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0px 3px;
+  padding: 10px 16px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+
+.get-started:hover {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+.get-started:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .navbar__search,

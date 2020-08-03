@@ -1,0 +1,22 @@
+.recommendation {
+  background: url(../../../img/purple-intersect.svg) repeat-x #6e1a52;
+  background-size: auto 120%;
+  background-position: 0 -2.4rem;
+
+  padding: spacing(4.8) spacing(2.4);
+  margin: spacing(4) spacing(0);
+
+  @include flex(column, center, center);
+
+  h3 {
+    @include text($h3, $textWhite, $fwBold);
+    text-align: center;
+    margin-bottom: spacing(0.8);
+  }
+
+  p {
+    @include text($h5 + 1px, $textWhite, $fwRegular);
+    text-align: center;
+    margin-bottom: spacing(1.6);
+  }
+}
