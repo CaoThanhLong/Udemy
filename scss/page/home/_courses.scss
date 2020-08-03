@@ -1,0 +1,54 @@
+.courses {
+  .nav {
+    .nav-item {
+      &:hover {
+        .nav-link {
+          border: none;
+        }
+      }
+      .nav-link.active {
+        border: none;
+        @include text($h6, $textGrey, $fwBold);
+        position: relative;
+
+        &::after {
+          content: "";
+          background-color: $grey;
+          display: block;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transform: translate(5%, 0);
+          width: 90%;
+        }
+      }
+      .nav-link {
+        @include text($h6, $textLightGrey, $fwBold);
+        border: none;
+        padding: spacing(1.5) spacing(1.2);
+      }
+    }
+  }
+
+  .tab-content {
+    .tab-pane.container {
+      margin: spacing(0);
+      padding: spacing(2) spacing(0.4);
+      max-width: 100%;
+    }
+  }
+
+  @include responsive-for("small") {
+    .nav {
+      flex-direction: column;
+      .nav-item {
+        .nav-link.active {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

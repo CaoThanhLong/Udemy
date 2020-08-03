@@ -1,0 +1,66 @@
+.card {
+  border: none;
+  cursor: pointer;
+
+  .card-img-top {
+    border: 1px solid #dcdacb;
+    position: relative;
+    &:hover::before {
+      content: "";
+      position: absolute;
+      background-color: $darkGrey;
+      opacity: 0.3;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: opacity linear 100ms;
+    }
+  }
+
+  .card-body {
+    padding: spacing(0.5) spacing(0);
+  }
+
+  .card-title {
+    @include text($h6, $textGrey, $fwBold);
+    margin: spacing(0.5) spacing(0);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .card-text {
+    @include text($body2, $textLightGrey, $fwRegular);
+    margin: spacing(0.4) spacing(0);
+  }
+
+  .rating {
+    span:first-child {
+      @include text($subtitle2, $textDarkYellow, $fwBold);
+      margin-right: spacing(0.5);
+    }
+    .rating__star {
+      @include text($body2, $textYellow, $fwRegular);
+    }
+    span:last-child {
+      @include text($body2, $textLightGrey, $fwRegular);
+      margin-left: spacing(0.5);
+    }
+  }
+
+  .price {
+    @include text($h6, $textGrey, $fwBold);
+    margin: spacing(0.4) spacing(0);
+  }
+
+  .btn {
+    background-color: $yellow;
+    border: none;
+    padding: spacing(0.2) spacing(0.7);
+    @include text($body2, $textGrey, $fwBold);
+  }
+}
