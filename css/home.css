@@ -250,7 +250,7 @@ body {
 
 .courses .tab-content .tab-pane.container {
   margin: 0px;
-  padding: 20px 4px;
+  padding: 20px 4px 0px 4px;
   max-width: 100%;
 }
 
@@ -271,6 +271,32 @@ body {
   font-weight: 700;
   color: #3c3b37;
   margin-bottom: 13px;
+}
+
+.because_you_search h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3c3b37;
+  margin-bottom: 13px;
+}
+
+.because_you_search h4 span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f7c90;
+}
+
+@media screen and (max-width: 420px) {
+  .because_you_search h4 {
+    font-size: 16px;
+  }
+  .because_you_search h4 span {
+    font-size: 16px;
+  }
+}
+
+.owl-carousel {
+  margin: 0px 2px;
 }
 
 .owl-carousel .owl-nav {
@@ -472,15 +498,19 @@ body {
   position: relative;
 }
 
-.card .card-img-top:hover::before {
+.card .card-img-top::before {
   content: "";
   position: absolute;
   background-color: #686f7a;
-  opacity: 0.3;
+  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.card .card-img-top:hover::before {
+  opacity: 0.3;
   -webkit-transition: opacity linear 100ms;
   transition: opacity linear 100ms;
 }
@@ -489,7 +519,7 @@ body {
   padding: 5px 0px;
 }
 
-.card .card-title {
+.card .card-body .card-title {
   font-size: 16px;
   font-weight: 700;
   color: #3c3b37;
@@ -502,46 +532,57 @@ body {
   -webkit-box-orient: vertical;
 }
 
-.card .card-text {
+.card .card-body .card-text {
   font-size: 12px;
   font-weight: 400;
   color: #73726c;
   margin: 4px 0px;
 }
 
-.card .rating span:first-child {
+.card .card-body .rating span:first-child {
   font-size: 14px;
   font-weight: 700;
   color: #be5a0e;
   margin-right: 5px;
 }
 
-.card .rating .rating__star {
+.card .card-body .rating .rating__star {
   font-size: 12px;
   font-weight: 400;
   color: #eb8a2f;
 }
 
-.card .rating span:last-child {
+.card .card-body .rating span:last-child {
   font-size: 12px;
   font-weight: 400;
   color: #73726c;
   margin-left: 5px;
 }
 
-.card .price {
+.card .card-body .price {
   font-size: 16px;
   font-weight: 700;
   color: #3c3b37;
   margin: 4px 0px;
 }
 
-.card .btn {
-  background-color: #ffe799;
+.card .card-body .btn {
   border: none;
   padding: 2px 7px;
   font-size: 12px;
   font-weight: 700;
-  color: #3c3b37;
+  color: #3b0a00;
+}
+
+.card .card-body .bestseller {
+  background-color: #ffe799;
+}
+
+.card .card-body .new {
+  background-color: #99dbaa;
+}
+
+.card .card-body .highest-rated {
+  background-color: #ffc48c;
 }
 /*# sourceMappingURL=home.css.map */
