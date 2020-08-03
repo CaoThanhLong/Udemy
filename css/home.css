@@ -132,7 +132,7 @@ body {
 }
 
 .slider {
-  background-image: url("../../../img/cover.jpg");
+  background-image: url(../../../img/cover.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -254,44 +254,103 @@ body {
   max-width: 100%;
 }
 
+@media screen and (max-width: 576px) {
+  .courses .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .courses .nav .nav-item .nav-link.active::after {
+    display: none;
+  }
+}
+
 .owl-carousel .owl-nav {
   display: block !important;
 }
 
-.owl-prev,
-.owl-next {
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
   position: absolute;
-  top: 13%;
-  left: -2%;
+  top: 15%;
+  left: -2.5%;
   width: 45px;
   height: 45px;
   border-radius: 50% !important;
   background-color: #ffffff !important;
-  -webkit-box-shadow: 0 2px 8px 2px rgba(20, 23, 28, 0.1);
-          box-shadow: 0 2px 8px 2px rgba(20, 23, 28, 0.1);
+  -webkit-box-shadow: 0 2px 8px 2px rgba(146, 153, 165, 0.1);
+          box-shadow: 0 2px 8px 2px rgba(146, 153, 165, 0.1);
   outline: none !important;
 }
 
-.owl-prev span,
-.owl-next span {
+.owl-carousel .owl-nav .owl-prev span,
+.owl-carousel .owl-nav .owl-next span {
   font-size: 44px;
   font-weight: 400;
   color: #0f7c90;
   line-height: 0.7;
 }
 
-.owl-prev:hover span,
-.owl-next:hover span {
+.owl-carousel .owl-nav .owl-prev:hover span,
+.owl-carousel .owl-nav .owl-next:hover span {
   font-size: 44px;
   font-weight: 400;
   color: #3c3b37;
   line-height: 0.7;
 }
 
-.owl-next {
+.owl-carousel .owl-nav .owl-next {
   left: unset;
-  top: 13%;
-  right: -2%;
+  right: -2.5%;
+}
+
+.owl-carousel .owl-dot {
+  display: none !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .owl-carousel .owl-nav .owl-prev {
+    top: 15%;
+    left: -3%;
+  }
+  .owl-carousel .owl-nav .owl-next {
+    top: 15%;
+    right: -3%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .owl-carousel .owl-nav .owl-prev {
+    top: 17%;
+    left: -3.5%;
+  }
+  .owl-carousel .owl-nav .owl-next {
+    top: 17%;
+    right: -3.5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .owl-carousel .owl-nav .owl-prev {
+    top: 17%;
+    left: -4%;
+  }
+  .owl-carousel .owl-nav .owl-next {
+    top: 17%;
+    right: -4%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .owl-carousel .owl-nav .owl-prev {
+    top: 20%;
+    left: -6%;
+  }
+  .owl-carousel .owl-nav .owl-next {
+    top: 20%;
+    right: -6%;
+  }
 }
 
 .login {

@@ -38,4 +38,17 @@
       max-width: 100%;
     }
   }
+
+  @include responsive-for("small") {
+    .nav {
+      flex-direction: column;
+      .nav-item {
+        .nav-link.active {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
