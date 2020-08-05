@@ -20,4 +20,14 @@
     text-align: center;
     margin-bottom: spacing(1.6);
   }
+
+  @include responsive-for("extra-small") {
+    h3 {
+      font-size: $h4;
+    }
+
+    p {
+      font-size: $h6;
+    }
+  }
 }
