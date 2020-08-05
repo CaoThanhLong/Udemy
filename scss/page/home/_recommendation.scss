@@ -2,9 +2,10 @@
   background: url(../../../img/purple-intersect.svg) repeat-x #6e1a52;
   background-size: auto 120%;
   background-position: 0 -2.4rem;
+  border-radius: 5px;
 
   padding: spacing(4.8) spacing(2.4);
-  margin: spacing(4) spacing(0);
+  margin: spacing(5) spacing(0);
 
   @include flex(column, center, center);
 
