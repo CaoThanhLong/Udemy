@@ -45,3 +45,19 @@
     spacing(1) spacing(1.6)
   );
 }
+
+.start-teaching {
+  @include button(
+    $h6,
+    $fwBold,
+    $textWhite,
+    $blue,
+    $blue,
+    $textWhite,
+    $darkBlue,
+    $darkBlue,
+    none,
+    spacing(0) spacing(0.3),
+    spacing(1) spacing(1.4)
+  );
+}

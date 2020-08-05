@@ -1,0 +1,33 @@
+.teach {
+  position: relative;
+
+  &__background {
+    height: 80%;
+    background-color: #fbfbf7;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+
+  &__content {
+    margin: spacing(5) spacing(23);
+    position: inherit;
+
+    img {
+      margin-right: spacing(10);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    &__detail {
+      h3 {
+        @include text($h3, $textGrey, $fwBold);
+      }
+
+      p {
+        @include text($h5 + 1px, $textGrey, $fwRegular);
+      }
+    }
+  }
+}
