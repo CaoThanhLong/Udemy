@@ -229,7 +229,7 @@ body {
 
 .courses .nav .nav-item .nav-link.active::after {
   content: "";
-  background-color: #3c3b37;
+  background-color: #686f7a;
   display: block;
   height: 2px;
   position: absolute;
@@ -305,8 +305,9 @@ body {
   background: url(../../../img/purple-intersect.svg) repeat-x #6e1a52;
   background-size: auto 120%;
   background-position: 0 -2.4rem;
+  border-radius: 5px;
   padding: 48px 24px;
-  margin: 40px 0px;
+  margin: 50px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,6 +342,33 @@ body {
   color: #ffffff;
   text-align: center;
   margin-bottom: 16px;
+}
+
+.top-categories h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3c3b37;
+  margin-bottom: 5px;
+}
+
+.top-categories__content {
+  margin: 0px -6px;
+}
+
+.top-categories__item {
+  margin: 8px 0px;
+  border: 1px solid #dcdacb;
+}
+
+.top-categories__item img {
+  width: 100%;
+}
+
+.top-categories__item h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3c3b37;
+  padding: 16px 16px 25px;
 }
 
 .owl-carousel {
@@ -521,7 +549,7 @@ body {
 .slider__search .form-control:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: solid 1px #3c3b37;
+  border: solid 1px #686f7a;
   border-right: solid 1px #f2f3f5;
   background-color: #ffffff;
 }
@@ -531,7 +559,7 @@ body {
   font-size: 13px;
   background-color: #ffffff;
   color: #ec5252;
-  border: solid 1px #3c3b37;
+  border: solid 1px #686f7a;
   border-left: none;
 }
 
@@ -561,7 +589,7 @@ body {
 .mycontainer {
   height: auto;
   width: auto;
-  margin: 25px 27px;
+  margin: 25px 28px;
   padding: 0px;
   border: none;
   background: none;
@@ -580,7 +608,7 @@ body {
 .card .card-img-top::before {
   content: "";
   position: absolute;
-  background-color: #686f7a;
+  background-color: #3c3b37;
   opacity: 0;
   top: 0;
   left: 0;
