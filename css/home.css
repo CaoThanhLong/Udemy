@@ -344,6 +344,15 @@ body {
   margin-bottom: 16px;
 }
 
+@media screen and (max-width: 420px) {
+  .recommendation h3 {
+    font-size: 24px;
+  }
+  .recommendation p {
+    font-size: 16px;
+  }
+}
+
 .top-categories h4 {
   font-size: 24px;
   font-weight: 700;
@@ -369,6 +378,15 @@ body {
   font-weight: 700;
   color: #3c3b37;
   padding: 16px 16px 25px;
+}
+
+@media screen and (max-width: 420px) {
+  .top-categories h4 {
+    font-size: 16px;
+  }
+  .top-categories__item h5 {
+    font-size: 16px;
+  }
 }
 
 .owl-carousel {

@@ -21,4 +21,16 @@
       padding: spacing(1.6) spacing(1.6) spacing(2.5);
     }
   }
+
+  @include responsive-for("extra-small") {
+    h4 {
+      font-size: $h6;
+    }
+
+    &__item {
+      h5 {
+        font-size: $h6;
+      }
+    }
+  }
 }
