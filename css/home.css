@@ -344,7 +344,7 @@ body {
   margin-bottom: 16px;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 576px) {
   .recommendation h3 {
     font-size: 24px;
   }
@@ -391,6 +391,8 @@ body {
 
 .teach {
   position: relative;
+  max-width: 1400px;
+  margin: 0px auto;
 }
 
 .teach__background {
@@ -415,6 +417,11 @@ body {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+.teach__content__detail {
+  max-width: 420px;
+  min-width: 420px;
+}
+
 .teach__content__detail h3 {
   font-size: 32px;
   font-weight: 700;
@@ -425,6 +432,55 @@ body {
   font-size: 19px;
   font-weight: 400;
   color: #3c3b37;
+}
+
+@media screen and (max-width: 1200px) {
+  .teach__background {
+    height: 120%;
+  }
+  .teach__content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .teach__content img {
+    display: none;
+  }
+  .teach__content__detail {
+    min-width: 650px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .teach__content__detail {
+    min-width: 500px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .teach__content__detail {
+    min-width: 350px;
+  }
+  .teach__content__detail h3 {
+    font-size: 24px;
+  }
+  .teach__content__detail p {
+    font-size: 16px;
+  }
+  .teach__content__detail button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .teach__content {
+    margin: 50px 30px;
+  }
+  .teach__content__detail {
+    min-width: unset;
+  }
 }
 
 .owl-carousel {

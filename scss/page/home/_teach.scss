@@ -1,5 +1,7 @@
 .teach {
   position: relative;
+  max-width: 1400px;
+  margin: spacing(0) auto;
 
   &__background {
     height: 80%;
@@ -21,12 +23,70 @@
     }
 
     &__detail {
+      max-width: 420px;
+      min-width: 420px;
       h3 {
         @include text($h3, $textGrey, $fwBold);
       }
 
       p {
         @include text($h5 + 1px, $textGrey, $fwRegular);
+      }
+    }
+  }
+
+  @include responsive-for("extra-large") {
+    &__background {
+      height: 120%;
+    }
+    &__content {
+      justify-content: center;
+      img {
+        display: none;
+      }
+
+      &__detail {
+        min-width: 650px;
+        width: 100%;
+
+        text-align: center;
+      }
+    }
+  }
+
+  @include responsive-for("medium") {
+    &__content {
+      &__detail {
+        min-width: 500px;
+      }
+    }
+  }
+
+  @include responsive-for("small") {
+    &__content {
+      &__detail {
+        min-width: 350px;
+
+        h3 {
+          font-size: $h4;
+        }
+
+        p {
+          font-size: $h6;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include responsive-for("extra-small") {
+    &__content {
+      margin: spacing(5) spacing(3);
+      &__detail {
+        min-width: unset;
       }
     }
   }
