@@ -1,6 +1,5 @@
 .teach {
   position: relative;
-  max-width: 1400px;
   margin: spacing(0) auto;
 
   &__background {
@@ -18,7 +17,7 @@
     position: inherit;
 
     img {
-      margin-right: spacing(10);
+      margin-right: spacing(9.5);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
@@ -37,10 +36,11 @@
 
   @include responsive-for("extra-large") {
     &__background {
-      height: 120%;
+      height: 150%;
     }
     &__content {
       justify-content: center;
+      margin: spacing(10) spacing(23);
       img {
         display: none;
       }
