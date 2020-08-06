@@ -1,0 +1,95 @@
+.business {
+  position: relative;
+  margin: spacing(0) auto;
+
+  &__background {
+    height: 80%;
+    background-color: $darkBlue;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+
+  &__content {
+    margin: spacing(5) spacing(23);
+    position: inherit;
+
+    &__detail {
+      margin-right: spacing(7);
+      max-width: 420px;
+      min-width: 420px;
+
+      h3 {
+        @include text($h3, $textWhite, $fwBold);
+      }
+
+      p {
+        @include text($h5 + 1px, $textWhite, $fwRegular);
+      }
+    }
+
+    img {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  @include responsive-for("extra-large") {
+    &__background {
+      height: 150%;
+    }
+    &__content {
+      justify-content: center;
+      margin: spacing(10) spacing(23);
+      img {
+        display: none;
+      }
+
+      &__detail {
+        min-width: 650px;
+        width: 100%;
+        margin-right: spacing(0);
+
+        text-align: center;
+      }
+    }
+  }
+
+  @include responsive-for("medium") {
+    &__content {
+      &__detail {
+        min-width: 500px;
+      }
+    }
+  }
+
+  @include responsive-for("small") {
+    &__content {
+      &__detail {
+        min-width: 350px;
+
+        h3 {
+          font-size: $h4;
+        }
+
+        p {
+          font-size: $h6;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include responsive-for("extra-small") {
+    &__content {
+      margin: spacing(5) spacing(3);
+      &__detail {
+        min-width: unset;
+      }
+    }
+  }
+}

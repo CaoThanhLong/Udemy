@@ -7,7 +7,7 @@
     $blue,
     $textDarkBlue,
     transparent,
-    $darkBlue,
+    $mediumBlue,
     none,
     spacing(0) spacing(0.3),
     spacing(0.8) spacing(2.2)
@@ -22,8 +22,8 @@
     $blue,
     $blue,
     $textWhite,
-    $darkBlue,
-    $darkBlue,
+    $mediumBlue,
+    $mediumBlue,
     none,
     spacing(0) spacing(0.3),
     spacing(0.8) spacing(2.2)
@@ -46,7 +46,8 @@
   );
 }
 
-.start-teaching {
+.start-teaching,
+.get-for-business {
   @include button(
     $h6,
     $fwBold,
@@ -54,8 +55,8 @@
     $blue,
     $blue,
     $textWhite,
-    $darkBlue,
-    $darkBlue,
+    $mediumBlue,
+    $mediumBlue,
     none,
     spacing(0) spacing(0.3),
     spacing(1) spacing(1.4)
