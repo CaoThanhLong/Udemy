@@ -1526,14 +1526,17 @@
     </section>
 
     <section class="transform">
-      <div class="transform__content">
-        <div class="video-wrapper">
+      <div class="transform__content d-flex justify-content-center align-items-center">
+        <div class="transform__content__video">
           <!-- <img src="./img/mohamad-story.jpg"> -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/QFIhEmOd6No" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <div class="transform__content__detail">
-            <h3>Transform your life through education</h3>
-            <p>Mohamad Alaloush launched a new career in software development by taking courses on Udemy. What will you be able to do?</p>
-          </div>
+          <iframe id="mohamad-story-video" class="video" width="560" height="315" src="https://www.youtube.com/embed/y32gxeGRhtQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <button id="mohamad-story-play" class="poster">
+            <i class="fa fa-play poster__play"></i>
+          </button>
+        </div>
+        <div class="transform__content__detail">
+          <h3>Transform your life through education</h3>
+          <p>Mohamad Alaloush launched a new career in software development by taking courses on Udemy. What will you be able to do?</p>
         </div>
       </div>
     </section>
@@ -1556,5 +1559,6 @@
     ></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/owl.carousel.js"></script>
+    <script src="./js/playvideo.js"></script>
   </body>
 </html>
