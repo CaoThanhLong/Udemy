@@ -483,6 +483,32 @@ body {
   }
 }
 
+.companies {
+  border: solid 1px #dcdacb;
+  border-left: none;
+  border-right: none;
+  padding: 32px;
+}
+
+.companies h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3c3b37;
+  margin-bottom: 12px;
+}
+
+.companies__logo {
+  margin-top: 12px;
+}
+
+.companies__logo a img {
+  margin: 0px 20px;
+}
+
+.companies__logo a:nth-child(3) img {
+  width: 150px;
+}
+
 .owl-carousel {
   margin: 0px 2px;
 }

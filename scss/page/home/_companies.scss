@@ -1,0 +1,26 @@
+.companies {
+  border: solid 1px $mediumGrey;
+  border-left: none;
+  border-right: none;
+  padding: spacing(3.2);
+
+  h4 {
+    @include text($h4, $textGrey, $fwBold);
+    margin-bottom: spacing(1.2);
+  }
+
+  &__logo {
+    margin-top: spacing(1.2);
+    a {
+      img {
+        margin: spacing(0) spacing(2);
+      }
+    }
+
+    a:nth-child(3) {
+      img {
+        width: 150px;
+      }
+    }
+  }
+}
