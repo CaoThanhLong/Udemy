@@ -7,20 +7,26 @@
   h4 {
     @include text($h4, $textGrey, $fwBold);
     margin-bottom: spacing(1.2);
+    text-align: center;
   }
 
   &__logo {
-    margin-top: spacing(1.2);
     a {
       img {
-        margin: spacing(0) spacing(2);
+        margin: spacing(1.2);
       }
     }
 
     a:nth-child(3) {
       img {
-        width: 150px;
+        width: 160px;
       }
+    }
+  }
+
+  @include responsive-for("extra-small") {
+    h4 {
+      font-size: $h6;
     }
   }
 }
