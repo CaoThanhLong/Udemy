@@ -21,7 +21,7 @@
     margin-bottom: spacing(1.6);
   }
 
-  @include responsive-for("extra-small") {
+  @include responsive-for("small") {
     h3 {
       font-size: $h4;
     }
