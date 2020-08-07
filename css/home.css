@@ -353,6 +353,18 @@ body {
   }
 }
 
+@media screen and (max-width: 420px) {
+  .recommendation h3 {
+    font-size: 16px;
+  }
+  .recommendation p {
+    font-size: 13px;
+  }
+  .recommendation button {
+    font-size: 14px;
+  }
+}
+
 .top-categories h4 {
   font-size: 24px;
   font-weight: 700;
@@ -481,6 +493,15 @@ body {
   .teach__content__detail {
     min-width: unset;
   }
+  .teach__content__detail h3 {
+    font-size: 16px;
+  }
+  .teach__content__detail p {
+    font-size: 13px;
+  }
+  .teach__content__detail button {
+    font-size: 14px;
+  }
 }
 
 .companies {
@@ -605,6 +626,15 @@ body {
   .business__content__detail {
     min-width: unset;
   }
+  .business__content__detail h3 {
+    font-size: 16px;
+  }
+  .business__content__detail p {
+    font-size: 13px;
+  }
+  .business__content__detail button {
+    font-size: 14px;
+  }
 }
 
 .transform {
@@ -614,15 +644,31 @@ body {
 }
 
 .transform__content {
-  margin: 60px 180px;
+  margin: 60px 100px;
+  position: inherit;
 }
 
 .transform__content__video {
   margin-right: 60px;
-  position: relative;
+  width: 40%;
 }
 
-.transform__content__video .poster {
+.transform__content__video .video-wrapper {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+}
+
+.transform__content__video .video-wrapper iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.transform__content__video .video-wrapper .poster {
   background: url(../../../img/mohamad-story.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -635,7 +681,7 @@ body {
   height: 100%;
 }
 
-.transform__content__video .poster__play {
+.transform__content__video .video-wrapper .poster__play {
   width: 65px;
   height: 65px;
   color: #3c3b37;
@@ -662,6 +708,41 @@ body {
   font-size: 19px;
   font-weight: 400;
   color: #3c3b37;
+}
+
+@media screen and (max-width: 1200px) {
+  .transform__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 4%;
+  }
+  .transform__content__video {
+    margin-right: 0px;
+    width: 100%;
+  }
+  .transform__content__detail {
+    margin-top: 20px;
+    max-width: unset;
+    min-width: unset;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .transform__content__detail h3 {
+    font-size: 24px;
+  }
+  .transform__content__detail p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .transform__content__detail h3 {
+    font-size: 16px;
+  }
+  .transform__content__detail p {
+    font-size: 13px;
+  }
 }
 
 .owl-carousel {
