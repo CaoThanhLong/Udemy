@@ -30,4 +30,18 @@
       font-size: $h6;
     }
   }
+
+  @include responsive-for("extra-small") {
+    h3 {
+      font-size: $h6;
+    }
+
+    p {
+      font-size: $subtitle1;
+    }
+
+    button {
+      font-size: $subtitle2;
+    }
+  }
 }
