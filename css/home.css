@@ -745,6 +745,120 @@ body {
   }
 }
 
+.myfooter {
+  padding: 24px 48px;
+}
+
+.myfooter .links-locale .link-list {
+  margin-right: 0px;
+  list-style-type: none;
+}
+
+.myfooter .links-locale .link-list .link {
+  font-size: 14px;
+  font-weight: 400;
+  color: #0f7c90;
+  text-decoration: none;
+  display: block;
+  padding: 4px 0px;
+}
+
+.myfooter .links-locale .locale {
+  width: 32%;
+  text-align: right;
+}
+
+.myfooter .links-locale .locale .locale__group {
+  width: 60%;
+  overflow: hidden;
+  position: relative;
+}
+
+.myfooter .links-locale .locale .locale__group .left-icon,
+.myfooter .links-locale .locale .locale__group .right-icon {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.myfooter .links-locale .locale .locale__group .right-icon {
+  left: unset;
+  right: 15px;
+}
+
+.myfooter .links-locale .locale .locale__group .locale__select {
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #686f7a;
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  padding-left: 40px;
+  width: 100%;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #3c3b37;
+}
+
+.myfooter .logo-copyright {
+  margin-top: 42px;
+  margin-bottom: 29px;
+}
+
+.myfooter .logo-copyright .logo img {
+  width: 110px;
+}
+
+.myfooter .logo-copyright .copyright {
+  font-size: 12px;
+  font-weight: 400;
+  color: #73726c;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .myfooter .links-locale .locale .locale__group {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .myfooter {
+    padding: 24px 30px;
+  }
+  .myfooter .links-locale {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .myfooter .links-locale .link-list {
+    margin-bottom: 0px;
+  }
+  .myfooter .links-locale .locale {
+    width: 60%;
+    margin-bottom: 0px;
+    margin-top: 16px;
+  }
+  .myfooter .logo-copyright {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  .myfooter .logo-copyright .logo {
+    margin-bottom: 20px;
+  }
+}
+
 .owl-carousel {
   margin: 0px 2px;
 }
