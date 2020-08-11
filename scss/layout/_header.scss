@@ -99,4 +99,19 @@
       }
     }
   }
+
+  @include responsive-for("extra-small") {
+    .navbar-brand {
+      margin-right: spacing(0);
+    }
+
+    .navbar-nav {
+      margin-left: spacing(0);
+      .nav-item {
+        .nav-link {
+          margin: spacing(0) spacing(1);
+        }
+      }
+    }
+  }
 }

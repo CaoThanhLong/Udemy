@@ -131,6 +131,18 @@ body {
   }
 }
 
+@media screen and (max-width: 420px) {
+  .mynavbar .navbar-brand {
+    margin-right: 0px;
+  }
+  .mynavbar .navbar-nav {
+    margin-left: 0px;
+  }
+  .mynavbar .navbar-nav .nav-item .nav-link {
+    margin: 0px 10px;
+  }
+}
+
 .slider {
   background-image: url(../../../img/cover.jpg);
   background-position: center center;
@@ -955,7 +967,7 @@ body {
   font-size: 14px;
   font-weight: 700;
   margin: 0px 3px;
-  padding: 8px 22px;
+  padding: 8px 20px;
   background-color: transparent;
   border: 1px solid #0f7c90;
 }
@@ -976,7 +988,7 @@ body {
   font-size: 14px;
   font-weight: 700;
   margin: 0px 3px;
-  padding: 8px 22px;
+  padding: 8px 20px;
   background-color: #0f7c90;
   border: 1px solid #0f7c90;
 }
