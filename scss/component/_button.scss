@@ -62,3 +62,24 @@
     spacing(1) spacing(1.4)
   );
 }
+
+.close-collapse {
+  @include button(
+    $subtitle2,
+    $fwRegular,
+    $textWhite,
+    $blue,
+    $blue,
+    $textWhite,
+    $blue,
+    $blue,
+    none,
+    spacing(1) spacing(1),
+    spacing(0.5) spacing(0.5)
+  );
+
+  width: 35px;
+  height: 35px;
+  line-height: 25px;
+  border-radius: 50%;
+}

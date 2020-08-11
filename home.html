@@ -37,6 +37,7 @@
         class="navbar navbar-expand-md navbar-light justify-content-between flex-nowrap"
       >
         <button
+          id="toggler"
           class="navbar-toggler mytoggler"
           type="button"
           data-toggle="collapse"
@@ -54,8 +55,22 @@
             </div>
           </a>
           <div class="categories">
-            <i class="fa fa-th"></i>
             Categories
+            <div class="dropdown-content">
+              <a href="#">Development</a>
+              <a href="#">Business</a>
+              <a href="#">Finance & Accounting</a>
+              <a href="#">IT & Software</a>
+              <a href="#">Office Productivity</a>
+              <a href="#">Personal Development</a>
+              <a href="#">Design</a>
+              <a href="#">Marketing</a>
+              <a href="#">Lifestyle</a>
+              <a href="#">Photography</a>
+              <a href="#">Health & Fitness</a>
+              <a href="#">Music</a>
+              <a href="#">Teaching & Academics</a>
+            </div>
           </div>
           <div class="navbar__search">
             <form>
@@ -97,8 +112,35 @@
         </div>
       </nav>
 
-      <!-- <div class="collapse navbar-collapse" id="collapsibleNavId">    
-      </div> -->
+      <div class="collapse navbar-collapse mycollapse" id="collapsibleNavId">
+        <div class="d-flex align-items-start">
+          <div class="collapse-menu">
+            <a href="#">Login</a>
+            <a href="#">Signup</a>
+            <hr>
+            <span>Most popular</span>
+            <a href="#">Web Development</a>
+            <a href="#">Mobile Apps</a>
+            <a href="#">Game Development</a>
+            <a href="#">Finance</a>
+            <a href="#">Entrepreneurship</a>
+            <a href="#">Data & Analytics</a>
+            <a href="#">Digital Marketing</a>
+            <a href="#">Graphic Design</a>
+            <a href="#">IT Certification</a>
+            <a href="#">Personal Transformation</a>
+            <a href="#">All Categories</a>
+            <hr>
+            <span>More from Udemy</span>
+            <a href="#">Udemy for Business</a>
+            <a href="#">Get the app</a>
+            <a href="#">Invite friends</a>
+            <a href="#">Help</a>
+          </div>
+          <button class="btn close-collapse" id="close">X</button>
+        </div>
+        
+      </div>
     </header>
 
     <section class="slider">
@@ -2639,6 +2681,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/closecollapse.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/owl.carousel.js"></script>
     <script src="./js/playvideo.js"></script>

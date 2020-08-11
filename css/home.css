@@ -28,7 +28,7 @@ body {
 }
 
 .mynavbar .navbar-toggler {
-  border-color: transparent;
+  outline: none;
 }
 
 .mynavbar .navbar-brand {
@@ -50,10 +50,39 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
   cursor: pointer;
+  position: relative;
 }
 
 .mynavbar .categories:hover {
   cursor: pointer;
+  color: #0f7c90;
+}
+
+.mynavbar .categories:hover .dropdown-content {
+  display: block;
+}
+
+.mynavbar .categories .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: -16px;
+  background-color: #ffffff;
+  min-width: 200px;
+  border: solid 1px #dcdacb;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.mynavbar .categories .dropdown-content a {
+  color: #3c3b37;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.mynavbar .categories .dropdown-content a:hover {
   color: #0f7c90;
 }
 
@@ -82,6 +111,49 @@ body {
 
 .mynavbar .navbar-nav .nav-item:nth-child(3) .nav-link {
   margin-right: 20px;
+}
+
+.mynavbar .mycollapse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.mynavbar .mycollapse .collapse-menu {
+  background-color: #ffffff;
+  min-width: 200px;
+  border: solid 1px #dcdacb;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.mynavbar .mycollapse .collapse-menu a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #3c3b37;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.mynavbar .mycollapse .collapse-menu a:nth-child(1),
+.mynavbar .mycollapse .collapse-menu a:nth-child(2) {
+  color: #0f7c90;
+}
+
+.mynavbar .mycollapse .collapse-menu span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #3c3b37;
+  padding: 8px 16px;
+  display: block;
+}
+
+.mynavbar .mycollapse .collapse-menu hr {
+  margin: 5px 0px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1045,6 +1117,31 @@ body {
 
 .start-teaching:focus,
 .get-for-business:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.close-collapse {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 10px 10px;
+  padding: 5px 5px;
+  background-color: #0f7c90;
+  border: 1px solid #0f7c90;
+  width: 35px;
+  height: 35px;
+  line-height: 25px;
+  border-radius: 50%;
+}
+
+.close-collapse:hover {
+  color: #ffffff;
+  background-color: #0f7c90;
+  border-color: #0f7c90;
+}
+
+.close-collapse:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }

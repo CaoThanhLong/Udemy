@@ -2,7 +2,8 @@
   margin: spacing(1) spacing(0);
 
   .navbar-toggler {
-    border-color: transparent;
+    // border-color: transparent;
+    outline: none;
   }
 
   .navbar-brand {
@@ -19,9 +20,36 @@
     margin-right: spacing(3);
     align-self: center;
     cursor: pointer;
+    position: relative;
     &:hover {
       cursor: pointer;
       color: $textSecondary;
+      .dropdown-content {
+        display: block;
+      }
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 20px;
+      left: -16px;
+      background-color: $paper;
+      min-width: 200px;
+      border: solid 1px $mediumGrey;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+
+      a {
+        color: $textGrey;
+        padding: 10px 16px;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+          color: $textSecondary;
+        }
+      }
     }
   }
 
@@ -44,6 +72,44 @@
     .nav-item:nth-child(3) {
       .nav-link {
         margin-right: spacing(2);
+      }
+    }
+  }
+
+  .mycollapse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    .collapse-menu {
+      background-color: $paper;
+      min-width: 200px;
+      border: solid 1px $mediumGrey;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      overflow-y: scroll;
+      height: 500px;
+
+      a {
+        @include text($subtitle2, $textGrey, $fwRegular);
+        padding: 8px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      a:nth-child(1),
+      a:nth-child(2) {
+        color: $textSecondary;
+      }
+
+      span {
+        @include text($subtitle1, $textGrey, $fwBold);
+        padding: 8px 16px;
+        display: block;
+      }
+
+      hr {
+        margin: spacing(0.5) spacing(0);
       }
     }
   }
